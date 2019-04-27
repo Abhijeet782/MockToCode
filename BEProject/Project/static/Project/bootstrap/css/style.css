@@ -1,0 +1,66 @@
+ @charset "utf-8";
+/* CSS Document */
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	
+	font-family: 'Poppins', sans-serif;
+	background:#ff3;
+}
+a, a:hover, a:focus {
+	text-decoration:none;
+	outline:none;
+}
+
+.homepage h1
+{
+	font-size: 90px;
+    color: #2f0dec;
+    font-weight: 700;
+	padding:10px;
+}
+
+.home-image
+{
+	width:500px;
+	height:500px;
+	float:right;
+}
+
+.file-icon
+{
+	padding-right:15px;
+}
+
+.file-btn
+{
+	color: #ff3;
+    font-size: 45px;
+	font-family: 'Poppins', sans-serif;
+    margin: 50px 10px;
+    padding: 20px;
+    float: right;
+    background: #2f0dec;
+    border: 7px solid #2f0dec;
+    border-radius: 50px;
+}
+
+.file-btn:hover, .file-btn:focus
+{
+	border: 7px solid #f27b53;
+	color: #ff3;
+}
+
+
+.file-btn:hover .file-icon
+{
+	transform: rotate(360deg);
+	transition: transform 1s;
+}
+
+#b1
+{
+	padding-right:33px;
+}

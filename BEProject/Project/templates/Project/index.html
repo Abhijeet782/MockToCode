@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OCR-WEBPAGE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="../../static/Project/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../static/Project/bootstrap/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
+  
+  <script type="text/javascript" src="../../static/Project/bootstrap/jquery/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="../../static/Project/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../static/Project/bootstrap/js/particles.min.js"></script>
+
+</head>
+
+<body>
+<!--Heading H1-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 homepage">
+			<h1>OCR for Webpage Designing</h1>
+		</div>
+	</div>
+</div>
+<!--Heading Ends-->
+<h1> {{ response }} </h1>
+<h1> {{ error }} </h1>
+<!--Homepage Content--->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6">
+			<form method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<div class="form-group">				
+					<input type="file" name="uploadfile" id="img" style="display:none;"/>
+					<label for="img" id="b1" class="file-btn"><i class="fa fa-cloud-upload file-icon"></i>Upload Image</label>
+
+				</div>
+
+			<div class="form-group">
+				<button type="submit" class="file-btn"><i class="fa fa-cloud-upload file-icon"></i>Submit</button>
+			</div>
+			</form>
+				<div class="form-group">
+
+					<a href="{% url 'output' %}" class="file-btn" name="formSubmit" role="button"><i class="fa fa-rotate-right file-icon"></i>Generate Code</a>
+				</div>
+
+		</div>
+
+		<div class="col-md-6">
+			<img src="../../static/Project/images/a.png" alt="webdev" class="home-image">
+		</div>
+	</div>
+</div>
+<!--Homepage Ends-->
+
+</body>
+</html>
